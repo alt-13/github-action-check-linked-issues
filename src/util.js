@@ -129,7 +129,7 @@ function extractLocalIssues(body) {
 
 function extractExternalIssues(body) {
   const regex =
-    /\b(close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)\s*(https?:\/\/github\.com\/([^/]+)\/([^/]+)\/issues\/(\d+))/gim;
+    /\b(close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)\s(https?:\/\/github\.com\/)*(([^/]+)\/([^/]+)(\/issues\/|#)(\d+))/gim;
   const issues = [];
   let match;
 
